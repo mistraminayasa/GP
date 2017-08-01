@@ -1,0 +1,242 @@
+==========================1==========================
+<?php 
+class Kendaraan {
+    
+    var $kecepatan = 10;
+    var $roda = 4;
+    var $mesin = 1;
+    var $pintu = 4;
+    function __construct($laju) { // Menggunakan parameter. 
+       echo $this->kecepatan =$laju;
+}
+}
+
+$Bemo = new Kendaraan(112);
+
+
+?>
+////////////
+
+<?php 
+class Kendaraan {
+    
+    var $kecepatan = 10;
+    var $roda = 4;
+    var $mesin = 1;
+    var $pintu = 4;
+    function __construct() { // tanpa parameter
+       echo $this->kecepatan =112;
+}
+}
+
+$Bemo = new Kendaraan();?>
+
+==========================2==========================
+		Mengetahui Frequecy Array
+
+1) Gunakan algoritma untuk menyusun urutan nomor dari kecil ke besar
+	a. Mulai
+	b. Input Array [i]
+	c. i = 2 4 6 7 2 4 6 6 9 3 5 6 4
+	d. Bandingkan ukuran nomor pertama dengan nomor sebelahnya
+	e. Jika nomor pertama lebih besar, maka posisinya ditukar
+	f. Jika ukuran nomor pertama lebih kecil, maka tetap pada posisinya
+	g. Perbandingan dua angka pertama selesai.
+	h. Selanjutnya, perbandingan angka kedua dan ketiga (gunakan cara "e" dan "f")
+	i. perbandingan angka kedua dan ketiga selesai
+	j. Selanjutnya, bandingkan angka ketiga dan keempat (gunakan cara "e" dan "f")
+	k. perbandingan dua angka terus dilakukan sampai dua angka terakhir
+	l. Setelah perbandingan angka terakhir, perbandingan dimulai dari angka pertama lagi
+	m. begitu seterusnya sampai tidak ada posisi angka yang berubah.
+	n. Selesai
+
+	syntax javascript sorting
+	
+	var number = [2, 4, 6, 7, 2, 4, 6, 6, 9, 3, 5, 6, 4];
+	
+number.sort();
+	
+alert(number);
+2) Gunakan 2D array looping (dua array kosong) untuk menghitung element array.
+3) Lakukan sorting sesuai banyak element-nya. 
+	coding untuk 2D array masih belum begitu paham. 
+
+
+==========================3==========================
+CODINGNYA MASIH BELUM EFEKTIF. Penggabungan looping dan array masih perlu dilatih/.
+BAHASA YANG DIGUNAKAN JAVASCRIPT.
+
+
+function algoritma() {
+   
+var pointAlgoritma = 59;
+ 
+   if (pointAlgoritma > 51) {
+    
+    alert("Algoritma lulus");
+   
+ }
+ else {
+ alert("Algoritma tidak lulus");
+ }
+
+}
+
+
+
+function strukturData() {
+  
+ var pointStrukturData = 83;
+  
+ if (pointStrukturData > 51) {
+    
+  alert("Structur Data Lulus");
+    
+}
+  else {
+ alert("Struktur Data tidak lulus");
+ }
+
+}
+
+
+
+function kalkulus() {
+   
+ var pointkalkulus = 48;
+    
+if (pointkalkulus > 51) {
+      
+  alert("kalkulus Lulus");
+   
+ }
+    else {
+ alert("kalkulus tidak lulus");
+    }
+
+}
+
+
+
+
+
+function basisData() {
+   
+ var pointBasisData = 80;
+   
+ if (pointBasisData > 51) {
+    
+    alert("Basis Data Lulus");
+    }
+ 
+   else {
+ alert("Basis Data tidak lulus");
+ }
+
+}
+
+
+
+function jaringanKomputer() {
+   
+var pointJk = 45;
+  
+ if (pointJk > 51) {
+    
+ alert("Jaringan Komputer Lulus");
+ }
+   
+ else {
+ alert("Jaringan tidak lulus");
+ }
+}
+
+
+
+
+
+alert(algoritma());
+
+alert(strukturData());
+
+alert(kalkulus());
+
+alert(basisData());
+
+alert(jaringanKomputer());
+
+
+
+
+==========================4==========================
+
+
+Tipe data = 1. Boolean (true, fals)
+	    2. Date 
+	    3. String
+	    4. Number
+	    5. Float (Desimal)
+
+
+
+==========================5==========================
+
+integer Array A = A(a0,a1,a2)
+integer Array B = B(b0,b1,b2)
+
+if A > B ===> { A +1 }
+if A < B ===> { B +1}
+if A = B ===> {B & A = ""}
+
+
+
+
+==========================6==========================
+
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
+
+var input_stdin = "";
+var input_stdin_array = "";
+var input_currentline = 0;
+
+process.stdin.on('data', function (data) {
+    input_stdin += data;
+});
+
+process.stdin.on('end', function () {
+    input_stdin_array = input_stdin.split("\n");
+    main();    
+});
+
+function readLine() {
+    return input_stdin_array[input_currentline++];
+}
+
+/////////////// ignore above this line ////////////////////
+
+function divisibleSumPairs(n, k, ar) {
+    // Complete this function
+    let count = 0;
+    for(let i = 0; i < n - 1; i++) {
+        for(let j = i + 1; j < n; j++) {
+            if((ar[i] + ar[j]) % k === 0) {
+                count++;
+            }
+        }
+    }
+    console.log(count);
+}
+
+function main() {
+    var n_temp = readLine().split(' ');
+    var n = parseInt(n_temp[0]);
+    var k = parseInt(n_temp[1]);
+    ar = readLine().split(' ');
+    ar = ar.map(Number);
+    var result = divisibleSumPairs(n, k, ar);
+    // process.stdout.write("" + result + "\n");
+
+}
+
+
